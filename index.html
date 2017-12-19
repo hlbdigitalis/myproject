@@ -13,10 +13,6 @@
          font-size: 3.5em;
          }	  
   </style>
-	// Wrap every letter in a span
-$('.ml3').each(function(){
-  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
 
 anime.timeline({loop: true})
   .add({
@@ -39,7 +35,7 @@ anime.timeline({loop: true})
 </head>
 <body style="text-align: center">
   <h1 class="ml3" style="font-size: 72pt; font-family: calibri; color: #9E099B">
-    H<titlel>L</titlel>B digit&#257<titlel>L</titlel>is
+    <span class='letter'>H</span><titlel><span class='letter'>L</span></titlel><span class='letter'>B<span> digit&#257<titlel>L</titlel>is
   </h1>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>	
   <p style="font-size: 18pt; font-family: calibri; color: #9E099B">
