@@ -6,14 +6,42 @@
     a {color: #8B0000}
 	a:hover {color: #F08080}
 	a:active {color: green}
-	redl {color: #FF0000}
+    redl {color: #FF0000}
     titlel {color: #DC143C}
+    .ml3 {
+         font-weight: 900;
+         font-size: 3.5em;
+         }	  
   </style>
+	// Wrap every letter in a span
+$('.ml3').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: function(el, i) {
+      return 150 * (i+1)
+    }
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  <script>
+  </script>	  
 </head>
 <body style="text-align: center">
-  <p style="font-size: 72pt; font-family: calibri; color: #9E099B">
+  <h1 class="ml3" style="font-size: 72pt; font-family: calibri; color: #9E099B">
     H<titlel>L</titlel>B digit&#257<titlel>L</titlel>is
-  </p>
+  </h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>	
   <p style="font-size: 18pt; font-family: calibri; color: #9E099B">
     Capital <redl>L</redl> stands for <redl>L</redl>oyalty to our clients, 
     <redl>L</redl>iveliness in our design, 
