@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>HLB digit&#257Lis</title>
-  <style> 
-    a {color: #8B0000}
-	a:hover {color: #F08080}
-	a:active {color: green}
-    redl {color: #FF0000}
-    titlel {color: #DC143C}
-    .ml3 {font-weight: 900;font-size: 3.5em;}	  
-  </style>
-  <script>
-	  // Wrap every letter in a span
-$('.ml3').each(function(){
-  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
-	  
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml3 .letter',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 2250,
-    delay: function(el, i) {
-      return 150 * (i+1)
-    }
-  }).add({
-    targets: '.ml3',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-  </script>	  
-</head>
-<body style="text-align: center">
-  <h1 class="ml3">
-    <span class='letter'>H</span><span class='letter'>L</span><span class='letter'>B</span> digit&#257Lis
-  </h1>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>	
-  <p style="font-size: 18pt; font-family: calibri; color: #9E099B">
-    Capital <redl>L</redl> stands for <redl>L</redl>oyalty to our clients, 
-    <redl>L</redl>iveliness in our design, 
-    a <redl>L</redl>ionhearted vision,<br/>
-    and a <redl>L</redl>avish work spirit.
+  <head>
+    <title>WeCracy</title>
+	<style>
+	  .pad { padding: 65px }
+	  body { text-align: center; font-family: calibri; color: #C71610; background-color: #F0FFF0 }
+	  blue { color: #3B5998 }
+	  blu { color: #3B5998 }
+	  blu:hover { color: #C71610 } 
+	  .button1 { border-radius: 4px; background-color: #F0FFF0; border: 1px solid #C71610; color: #595959; text-align: center; font-size: 24px; padding: 14px;
+                width: 150px; transition: all 0.5s; cursor: pointer; margin-top: 155px }
+      .button1 span { cursor: pointer; display: inline-block; position: relative; transition: 0.5s }
+      .button1 span:after { content: '\00bb'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.5s }
+      .button1:hover span { padding-right: 25px; color: #C71610 }
+      .button1:hover span:after { opacity: 1; right: 0; color: #C71610 }
+	  .button2 { border-radius: 4px; background-color: #F0FFF0; border: 1px solid #3B5998; color: #595959; text-align: center; font-size: 24px; padding: 14px;
+                width: 150px; transition: all 0.5s; cursor: pointer; margin-top: 155px }
+	  .button2 span { cursor: pointer; display: inline-block; position: relative; transition: 0.5s }
+      .button2 span:after { content: '\00bb'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.5s }
+      .button2:hover span { padding-right: 25px; color: #3B5998 }
+      .button2:hover span:after { opacity: 1; right: 0; color: #3B5998 }
+    </style>	   
+  </head>
+  <body>
+  <p class="pad">
+    <div style="font-size: 72pt">
+	WE<blu>CRACY</blu>
+  	</div> <br />
+    <div style="font-size: 18pt">
+	We <blue>govern our minds by dominating our space</blue>
+  	</div>  
   </p>
-  <p style="font-size: 14pt; font-family: calibri; padding: 120px; color: #DC143C">
-    <a href="C:\Users\Houssam\Documents\WeCracy\HTML5 & CSS3\HLB digitalis\HLB Services">Services</a>&nbsp;&nbsp;/&nbsp;&nbsp;
-    <a href="C:\Users\Houssam\Documents\WeCracy\HTML5 & CSS3\HLB digitalis\HLB About Us">About Us</a>&nbsp;&nbsp;/&nbsp;&nbsp;
-    <a href="C:\Users\Houssam\Documents\WeCracy\HTML5 & CSS3\HLB digitalis\HLB Portfolio">Portfolio</a>&nbsp;&nbsp;/&nbsp;&nbsp;
-    <a href="C:\Users\Houssam\Documents\WeCracy\HTML5 & CSS3\HLB digitalis\HLB Contact">Contact</a>&nbsp;&nbsp;/&nbsp;&nbsp;
-    <a href="C:\Users\Houssam\Documents\WeCracy\HTML5 & CSS3\HLB digitalis\HLB Blog">Blog</a>
-  </p>
-</body>
-</html>
+  <button class="button1"><span>Sign Up </span></button>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button class="button2"><span>Log In </span></button>
+  </body>
+</html> 
